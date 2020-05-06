@@ -2,7 +2,7 @@
   "name": "js-starter",
   "version": "0.0.1",
   "description": "A boilerplate for starting js code",
-  "keywords": ["js-starter", "boilerplate"],
+  "keywords": "js-starter",
   "private": false,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -63,6 +63,5 @@
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
-  },
-  "browserslist": ["last 1 Chrome versions"]
+  }
 }
