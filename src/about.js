@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
+import { Typography, Button } from '@material-ui/core';
+import { ArrowForward } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,6 +27,9 @@ const navBar = () => {
         network of human trafficking fighters and crusaders, <br /> through law enforcement agencies and other human
         trafficking stakeholders <br /> with highly valuable human trafficking information.
       </Typography>
+      <Button variant="contained">
+        Continue <ArrowForward style={{ marginLeft: '10px' }} />{' '}
+      </Button>
     </div>
   );
 };
