@@ -1,12 +1,16 @@
 @import './_login';
 @import './_config';
+@import './_navbar';
 
 body {
   margin: 0;
   padding: 0;
-  background: $white;
+  background: $dark_blue;
 }
 
-.app {
-  color: red;
+.about {
+  text-align: center;
+  color: $white;
+  font-size: 14px !important;
+  margin-top: 200px;
 }
