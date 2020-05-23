@@ -20,7 +20,7 @@ module.exports = {
       {
         test: /\.(jpg|png)$/,
         use: {
-          loader: 'url-loader', 'file-loader'
+          loader: 'url-loader'
         }
       },
       { test: /\.(js|jsx)$/, use: 'babel-loader', exclude: /node_modules/ },
