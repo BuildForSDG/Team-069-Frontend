@@ -11,11 +11,9 @@
 // opt-in, read https://bit.ly/CRA-PWA
 
 const isLocalhost = Boolean(
-  window.location.hostname === 'localhost' ||
-    // [::1] is the IPv6 localhost address.
-    window.location.hostname === '[::1]' ||
-    // 127.0.0.0/8 are considered localhost for IPv4.
-    window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
+  window.location.hostname === 'localhost' 
+  ||  window.location.hostname === '[::1]' 
+  ||  window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
 );
 
 function registerValidSW(swUrl, config) {
@@ -38,24 +36,22 @@ function registerValidSW(swUrl, config) {
               if (config && config.onUpdate) {
                 config.onUpdate(registration);
               }
-            } else {
+            } else if (config && config.onSuccess) {
               // At this point, everything has been precached.
               // It's the perfect time to display a
               // "Content is cached for offline use." message.
 
               // Execute callback
-              if (config && config.onSuccess) {
+               
                 config.onSuccess(registration);
-              } else {
-                //nothing
-              }
-            }
+              
+            
           }
         };
       };
     })
     .catch((error) => {
-      return err;
+      return error;
     });
 }
 
@@ -79,9 +75,7 @@ function checkValidServiceWorker(swUrl, config) {
         registerValidSW(swUrl, config);
       }
     })
-    .catch(() => {
-      return console.log('No internet connection found. App is running in offline mode.');
-    });
+    .catch(() => "error");
 }
 
 export function register(config) {
