@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const navBar = () => {
+const landingPage = () => {
   const classes = useStyles();
   return (
     <div className="about">
@@ -34,4 +34,4 @@ const navBar = () => {
   );
 };
 
-export default navBar;
+export default landingPage;
