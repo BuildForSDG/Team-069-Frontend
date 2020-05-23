@@ -6,15 +6,23 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve('./dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/'
   },
   devServer: {
+    historyApiFallback: true,
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
     port: 8080
   },
   module: {
     rules: [
+      {
+        test: /\.(jpg|png)$/,
+        use: {
+          loader: 'url-loader', 'file-loader'
+        }
+      },
       { test: /\.(js|jsx)$/, use: 'babel-loader', exclude: /node_modules/ },
       {
         test: /\.scss$/,

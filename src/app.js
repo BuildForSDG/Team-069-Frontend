@@ -1,7 +1,8 @@
 import React from 'react';
 import NavBar from '../src/components/navBar/navbar';
 import LandingPage from './landingPage';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Login from '../src/components/login/login';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ParticlesBg from 'particles-bg';
 
 const App = () => {
@@ -11,7 +12,8 @@ const App = () => {
       <Router>
         <NavBar />
         <Switch>
-          <Route exact path="/" component={LandingPage} />
+          <Route path="/" exact component={LandingPage} />
+          <Route path="/login" render={Login} />
         </Switch>
       </Router>
     </div>

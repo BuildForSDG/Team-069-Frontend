@@ -1,11 +1,12 @@
-@import './_login';
 @import './_config';
+@import './_login';
 @import './_navbar';
 
 body {
   margin: 0;
   padding: 0;
   background: $dark_blue;
+  background-image: url('../img/human.jpg');
 }
 
 .about {
