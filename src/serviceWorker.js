@@ -12,8 +12,8 @@
 
 const isLocalhost = Boolean(
   window.location.hostname === 'localhost' 
-  ||  window.location.hostname === '[::1]' 
-  ||  window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
+||  window.location.hostname === '[::1]' 
+||  window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
 );
 
 function registerValidSW(swUrl, config) {
@@ -36,7 +36,7 @@ function registerValidSW(swUrl, config) {
               if (config && config.onUpdate) {
                 config.onUpdate(registration);
               }
-            } else if (config && config.onSuccess) {
+            } else if (config && config.onSuccess)
               // At this point, everything has been precached.
               // It's the perfect time to display a
               // "Content is cached for offline use." message.
@@ -46,7 +46,7 @@ function registerValidSW(swUrl, config) {
                 config.onSuccess(registration);
               
             
-          }
+          
         };
       };
     })
