@@ -36,14 +36,12 @@ function registerValidSW(swUrl, config) {
               if (config && config.onUpdate) {
                 config.onUpdate(registration);
               }
-            } else if (config && config.onSuccess)
+            } else if (config && config.onSuccess) { config.onSuccess(registration); }
             // At this point, everything has been precached.
             // It's the perfect time to display a
             // "Content is cached for offline use." message.
 
             // Execute callback
-
-            { config.onSuccess(registration); }
           }
         };
       };
