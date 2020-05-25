@@ -1,7 +1,7 @@
 import React from 'react';
-import NavBar from '../src/components/navBar/navbar';
+import NavBar from './components/navBar/navbar';
 import LandingPage from './landingPage';
-import Login from '../src/components/login/login';
+import Login from './components/login/login';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ParticlesBg from 'particles-bg';
 
