@@ -1,18 +1,31 @@
+@import './_config';
+@import './_login';
+@import './_navbar';
+
 body {
   margin: 0;
   padding: 0;
+  background: $dark_blue;
+  background-image: url('../img/human.jpg');
 }
 
-.container {
-  max-width: 800px;
-  padding: 0 16px;
-  margin: 48px auto;
-}
+.about {
+  text-align: center;
+  color: $white;
+  font-size: 14px !important;
+  margin-top: 200px;
 
-.app {
-  color: #ff7300;
+  & > button {
+    margin-top: 20px;
+  }
 
-  &:hover {
-    color: green;
+  h3 {
+    font-weight: bold;
+  }
+
+  h6 {
+    font-weight: normal;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
   }
 }
